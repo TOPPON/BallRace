@@ -6,14 +6,17 @@ public class VibrationPole : MonoBehaviour
 {
     // Start is called before the first frame update
     Vector3 firstPosition;
+    float timer;
     void Start()
     {
         firstPosition = gameObject.transform.position;
+        timer = Random.Range(0, 0.8f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        gameObject.transform.position = firstPosition + new Vector3(Random.Range(-0.2f, 0.2f),0,0);
+        timer += Time.deltaTime;
+        gameObject.transform.position = firstPosition + new Vector3(Mathf.Abs((timer%0.8f)*2-0.8f)-0.4f,0,0);
     }
 }

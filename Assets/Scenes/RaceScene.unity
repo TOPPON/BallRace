@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571322, b: 0.30692163, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -174,6 +174,8 @@ MonoBehaviour:
   - {fileID: 773296993}
   - {fileID: 525539664}
   - {fileID: 1680722481}
+  StartObj: {fileID: 1352227979}
+  GoalObj: {fileID: 1646919076}
 --- !u!1 &525539664
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,6 +488,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 90, z: 0}
+--- !u!1 &1352227979 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1541691600337798223, guid: cdc9b78e8b2130e4397c13298d455b29, type: 3}
+  m_PrefabInstance: {fileID: 2118870061}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1381524769
 GameObject:
   m_ObjectHideFlags: 0
@@ -808,6 +815,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1597508627}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1646919076 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8571084926567673470, guid: 91b3191876bf407439b672bc249eac0f, type: 3}
+  m_PrefabInstance: {fileID: 1719783894}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1680722481
 GameObject:
   m_ObjectHideFlags: 0
