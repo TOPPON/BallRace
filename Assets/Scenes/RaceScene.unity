@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571322, b: 0.30692163, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 525539667}
   - component: {fileID: 525539666}
   m_Layer: 0
-  m_Name: Sphere (4)
+  m_Name: Ball5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -234,7 +234,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 525539664}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: e89bc4aa21322384b9d04a4cbb938d9b, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -304,7 +304,7 @@ GameObject:
   - component: {fileID: 773296996}
   - component: {fileID: 773296995}
   m_Layer: 0
-  m_Name: Sphere (3)
+  m_Name: Ball4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -348,7 +348,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 773296993}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 4caaca417bd644e44b13e25703555816, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -601,7 +601,7 @@ GameObject:
   - component: {fileID: 1490788480}
   - component: {fileID: 1490788479}
   m_Layer: 0
-  m_Name: Sphere (1)
+  m_Name: Ball2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -645,7 +645,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1490788477}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 9ad082ccf1cfc7848a08031440630e6b, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -715,7 +715,7 @@ GameObject:
   - component: {fileID: 1597508630}
   - component: {fileID: 1597508629}
   m_Layer: 0
-  m_Name: Sphere (2)
+  m_Name: Ball3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -759,7 +759,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1597508627}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: f624170cf435b984e81ce03c829d9ae4, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -834,7 +834,7 @@ GameObject:
   - component: {fileID: 1680722484}
   - component: {fileID: 1680722483}
   m_Layer: 0
-  m_Name: Sphere (5)
+  m_Name: Ball6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -878,7 +878,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1680722481}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: c835560915ab3df46a8e39c5838e4b28, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -948,7 +948,7 @@ GameObject:
   - component: {fileID: 1695703531}
   - component: {fileID: 1695703530}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Ball1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -992,7 +992,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1695703528}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 2e1a0573afbf61249a622e83ae8c177a, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2

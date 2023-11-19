@@ -9,11 +9,20 @@ public class RaceManager : MonoBehaviour
     [SerializeField] GameObject GoalObj;
     float checktimer;
     int freezecount;
+    public enum RaceState
+    {
+        tes
+    };
+
     // Start is called before the first frame update
     void Start()
     {
         checktimer = 0;
         freezecount = 0;
+        for (int i = 0; i < 6; i++)
+        {
+            Balls[i].transform.localScale = new Vector3(GameManager.Instance.ballParams[i].scale, GameManager.Instance.ballParams[i].scale, GameManager.Instance.ballParams[i].scale);
+        }
     }
 
     // Update is called once per frame
@@ -58,7 +67,8 @@ public class RaceManager : MonoBehaviour
             float b = (Balls[i].transform.localPosition - StartObj.transform.localPosition).magnitude;
             float c = (StartObj.transform.localPosition - GoalObj.transform.localPosition).magnitude;
             float distance = (b * b + c * c - a * a) / (2 * c * c);
-            print(i.ToString()+":"+distance.ToString());
+            print(i.ToString() + ":" + distance.ToString());
         }
+
     }
 }
