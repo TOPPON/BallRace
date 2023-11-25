@@ -11,7 +11,7 @@ public class RaceManager : MonoBehaviour
     int freezecount;
     public enum RaceState
     {
-        tes
+        
     };
 
     // Start is called before the first frame update

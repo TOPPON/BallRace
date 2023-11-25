@@ -10,10 +10,13 @@ public class GameManager : MonoBehaviour
     public List<BallParam> ballParams = new List<BallParam>();
     public int[] ballRank;
     public int[] pastBallRank;
+    public int havecoin;
+    public int[] betcoin=new int[6];
     [SerializeField] List<PhysicMaterial> ballMaterials = new List<PhysicMaterial>();
     // Start is called before the first frame update
     void Start()
     {
+        havecoin = 10;
         if (Instance == null)
         {
             Instance = this;
