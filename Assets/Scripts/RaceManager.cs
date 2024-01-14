@@ -69,6 +69,5 @@ public class RaceManager : MonoBehaviour
             float distance = (b * b + c * c - a * a) / (2 * c * c);
             print(i.ToString() + ":" + distance.ToString());
         }
-
     }
 }

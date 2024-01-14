@@ -11,7 +11,8 @@ public class GameManager : MonoBehaviour
     public int[] ballRank;
     public int[] pastBallRank;
     public int havecoin;
-    public int[] betcoin=new int[6];
+    public int[] betcoin = new int[6];
+    public int[] oddsbyten = new int[6];
     [SerializeField] List<PhysicMaterial> ballMaterials = new List<PhysicMaterial>();
     // Start is called before the first frame update
     void Start()

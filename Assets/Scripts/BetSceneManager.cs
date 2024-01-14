@@ -8,10 +8,13 @@ public class BetSceneManager : MonoBehaviour
     [SerializeField] GameObject[] PaddockBalls;
     Vector3[] FirstPositions = new Vector3[6];
     [SerializeField] TextMeshProUGUI[] BallNameLabels;
+    [SerializeField] TextMeshProUGUI[] BallOddsLabels;
     [SerializeField] TextMeshProUGUI[] BallBetLabels;
     [SerializeField] TextMeshProUGUI HaveMoneyLabel;
     int allbetMoney;
     int[] betcoin = new int[6];
+    float[] betsBonus = new float[6];
+    const float PAYOUT = 0.8f;
     float paddocktimer = 0;
     // Start is called before the first frame update
     void Start()
@@ -29,7 +32,9 @@ public class BetSceneManager : MonoBehaviour
         for (int i = 0; i < 6; i++)
         {
             BallNameLabels[i].text = names[i];
+            betsBonus[i] = Random.Range(0.8f, 1.2f);
         }
+        RefreshBetCoinDisplay();
     }
 
     // Update is called once per frame
@@ -54,7 +59,7 @@ public class BetSceneManager : MonoBehaviour
     public void PushResetButton()
     {
         allbetMoney = 0;
-        for (int i=0;i<6;i++)
+        for (int i = 0; i < 6; i++)
         {
             betcoin[i] = 0;
             BallBetLabels[i].text = $"{betcoin[i]}";
@@ -74,7 +79,7 @@ public class BetSceneManager : MonoBehaviour
     }
     public void PushBall1BetDownButton()
     {
-        if (betcoin[0] >0)
+        if (betcoin[0] > 0)
         {
             allbetMoney--;
             betcoin[0]--;
@@ -186,5 +191,11 @@ public class BetSceneManager : MonoBehaviour
     {
         HaveMoneyLabel.text = $"掛けている枚数　　： {allbetMoney}\n持っているコイン　： {GameManager.Instance.havecoin} → {GameManager.Instance.havecoin - allbetMoney}";
     }
-
+    public void RefreshOdds(int ballId, float simplewin, float multiwin)
+    {
+        int oddsbyten = (int)((1 / simplewin * 0.8f + 1 / multiwin / 3 * 0.2f) * betsBonus[ballId] * PAYOUT * 10 + 0.5f);
+        if (oddsbyten < 10) oddsbyten = 10;
+        GameManager.Instance.oddsbyten[ballId] = oddsbyten;
+        BallOddsLabels[ballId].text = (oddsbyten / 10).ToString() + "." + (oddsbyten % 10).ToString();
+    }
 }
