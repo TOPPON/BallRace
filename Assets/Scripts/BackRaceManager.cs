@@ -7,7 +7,7 @@ using System.Linq;
 
 public class BackRaceManager : MonoBehaviour
 {
-    const int TRIES = 1000;
+    const int TRIES = 50;
     [SerializeField] RaceCource BackCource;
     [SerializeField] BetSceneManager betSceneManager;
     // Start is called before the first frame update
@@ -61,7 +61,7 @@ public class BackRaceManager : MonoBehaviour
         Physics.autoSimulation = true;
         for (int i = 0; i < 6; i++)
         {
-            print($"{i}番目のボール：単勝 {simpleWin[i] * 1.0 / TRIES},複勝 {multiWin[i] * 1.0 / TRIES}");
+            print($"Simurate: {i}番目のボール：単勝 {simpleWin[i] * 1.0 / TRIES},複勝 {multiWin[i] * 1.0 / TRIES}");
         }
     }
 
@@ -73,10 +73,10 @@ public class BackRaceManager : MonoBehaviour
         BackCource.simurateBySecond(Random.Range(0.1f, 1f));
         while (true)
         {
-            Physics.Simulate(0.01f);
-            BackCource.simurateBySecond(0.01f);
-            checktimer += 0.1f;
-            if (checktimer > 0.1f)
+            Physics.Simulate(GameManager.BACKRACEINTERVAL);
+            BackCource.simurateBySecond(GameManager.BACKRACEINTERVAL);
+            checktimer += GameManager.BACKRACEINTERVAL;
+            if (checktimer > GameManager.BACKRACEINTERVAL)
             {
                 checktimer = 0;
                 float sumvelosity = 0;
@@ -84,7 +84,7 @@ public class BackRaceManager : MonoBehaviour
                 {
                     sumvelosity += BackBalls[i].GetComponent<Rigidbody>().velocity.magnitude;
                 }
-                if (sumvelosity < 0.01f)
+                if (sumvelosity < GameManager.BACKRACEINTERVAL)
                 {
                     freezecount++;
                     if (freezecount > 5)
@@ -121,7 +121,7 @@ public class BackRaceManager : MonoBehaviour
         {
             printstring += $"{i}番目:{sortrank.ToArray()[i]}  ";
         }
-        print(printstring);
+        //print(printstring);
         return sortrank.ToArray();
     }
 }

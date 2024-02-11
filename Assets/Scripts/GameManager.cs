@@ -6,6 +6,8 @@ using System;
 
 public class GameManager : MonoBehaviour
 {
+    public const int RACEMODE = 2;//1: 実際のレース、2: 繰り返し確かめ
+    public const float BACKRACEINTERVAL = 0.1f;
     public static GameManager Instance;
     public List<BallParam> ballParams = new List<BallParam>();
     public int[] ballRank;
@@ -71,6 +73,7 @@ public class GameManager : MonoBehaviour
 }
 public class BallParam
 {
+    public static int randcount = 0;
     public float smooth;
     public float scale;
     public float bouncy;
@@ -79,9 +82,18 @@ public class BallParam
     public int bouncyInt;
     public BallParam()
     {
-        smoothInt = UnityEngine.Random.Range(0, 5);
-        scaleInt = UnityEngine.Random.Range(0, 5);
-        bouncyInt = UnityEngine.Random.Range(0, 5);
+        randcount += 2;
+        randcount %= 6;
+        smoothInt = randcount;
+        randcount += 1;
+        randcount %= 6;
+        scaleInt = randcount;
+        randcount += 4;
+        randcount %= 6;
+        bouncyInt = randcount;
+        //smoothInt = UnityEngine.Random.Range(0, 5);
+        //scaleInt = UnityEngine.Random.Range(0, 5);
+        //bouncyInt = UnityEngine.Random.Range(0, 5);
         smooth = smoothInt * 0.1f + 0.2f;
         scale = scaleInt * 0.1f + 0.5f;
         bouncy = bouncyInt * 0.1f + 0.3f;
